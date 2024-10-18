@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Calender</title>
+    <style>
+        body div{
+            box-shadow: 5px 5px black; 
+            /* 3 layes shadow effects- 5px 5px blue,10px 10px red, 15px 15px green */
+        }
+    .cl{
+            text-align: center;
+            font-size: 3em;
+    }
+    .calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Adjust for 7 days */
+    gap: 10px;
+    width: 50%;
+    margin: auto;
+}
+
+.day {
+    background-color: #e2e9ec;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #e07b7b;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+#hover-display {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    height: 30px;
+}
+
+.day:hover {
+    background-color: #374785;
+    color: #fff;
+}
+
+.day:hover::before {
+    content: attr(data-day);
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+    </style>
+</head>
+<body>
+    <h1 class="cl">
+        Calender            
+    </h1>
+    <div class="calendar">
+        <div class="day">S</div>
+        <div class="day">M</div>
+        <div class="day">T</div>
+        <div class="day">W</div>
+        <div class="day">T</div>
+        <div class="day">F</div>
+        <div class="day">S</div>
+        <div class="day" data-day="Sunday">1</div>
+        <div class="day" data-day="Monday">2</div>
+        <div class="day" data-day="Tuesday">3</div>
+        <div class="day" data-day="Wednesday">4</div>
+        <div class="day" data-day="Thursday">5</div>
+        <div class="day" data-day="Friday">6</div>
+        <div class="day" data-day="Saturday">7</div>
+        <div class="day" data-day="Sunday">8</div>
+        <div class="day" data-day="Monday">9</div>
+        <div class="day" data-day="Tuesday">10</div>
+        <div class="day" data-day="Wednesday">11</div>
+        <div class="day" data-day="Thursday">12</div>
+        <div class="day" data-day="Friday">13</div>
+        <div class="day" data-day="Saturday">14</div>
+        <div class="day" data-day="Sunday">15</div>
+        <div class="day" data-day="Monday">16</div>
+        <div class="day" data-day="Tuesday">17</div>
+        <div class="day" data-day="Wednesday">18</div>
+        <div class="day" data-day="Thursday">19</div>
+        <div class="day" data-day="Friday">20</div>
+        <div class="day" data-day="Saturday">21</div>
+        <div class="day" data-day="Sunday">22</div>
+        <div class="day" data-day="Monday">23</div>
+        <div class="day" data-day="Tuesday">24</div>
+        <div class="day" data-day="Wednesday">25</div>
+        <div class="day" data-day="Thursday">26</div>
+        <div class="day" data-day="Friday">27</div>
+        <div class="day" data-day="Saturday">28</div>
+        <div class="day" data-day="Sunday">29</div>
+        <div class="day" data-day="Monday">30</div>
+        <div class="day" data-day="Tuesday">1</div>
+        <div class="day" data-day="Wednesday">2</div>
+        <div class="day" data-day="Thursday">3</div>
+        <div class="day" data-day="Friday">4</div>
+        <div class="day" data-day="Saturday">5</div>
+       
+    </div>
+    <div id="hover-display"></div>
+    
+</body>
+</html>
